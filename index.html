@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>My Library</h1>
+        <button class="add-book">Add New Book</button>
+
+        <button class="delete-all">Delete All</button>
+      </div>
+    </header>
+    <main>
+      <div class="main-book-container"></div>
+    </main>
+    <!-- START Add Book Form Modal -->
+    <div class="modal-background">
+      <div class="add-book-modal modal-style">
+        <img
+          class="close"
+          src="./Images/close_FILL0_wght400_GRAD0_opsz48.svg"
+          alt="close"
+        />
+        <form class="form-style" action="">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" value="" required />
+          <label for="author">Author:</label>
+          <input type="text" id="author" name="author" value="" required />
+          <label for="pages">Number of Pages:</label>
+          <input type="number" id="pages" name="pages" value="" required />
+          <p>Have you read this book?</p>
+
+          <div class="yes">
+            <input type="checkbox" id="read" name="read" value="Yes" />
+            <label for="read">Yes</label>
+          </div>
+
+          <button class="form-add-btn" type="button" name="button">Add</button>
+        </form>
+      </div>
+    </div>
+    <!-- END Add Book Form Modal -->
+    <!-- START Delete All Confirmation Modal -->
+    <div class="del-modal-background">
+      <div class="delete-all-warning warning-style">
+        <img
+          class="delete-close"
+          src="./Images/Black_close_FILL0_wght400_GRAD0_opsz48.svg"
+          alt="close"
+        />
+        <p class="warning-text">
+          Are you sure you want to delete your entire library? This action can
+          not be reversed.
+        </p>
+        <button class="cancel">Cancel</button>
+        <button class="delete">Yes, Please Delete</button>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
