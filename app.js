@@ -35,18 +35,20 @@ class Book {
   }
 }
 // Add book button on form
-formAddBtn.addEventListener("click", function () {
+formAddBtn.addEventListener("click", function (e) {
   const newBook = new Book(
     titleInput.value,
     authorInput.value,
     pagesInput.value,
     readInput.checked
   );
+
   elementid = newBook.arrId;
   myLibrary.push(newBook);
   renderBookCard();
   modalBackground.classList.remove("modal-background-visible");
   displayModal.classList.remove("modal-visible");
+  e.preventDefault();
   form.reset();
 });
 function renderBookCard() {
@@ -113,9 +115,9 @@ function renderBookCard() {
     newCard.remove();
   });
   // render user input
-  dynamicTitle.textContent = titleInput.value;
-  dynamicAuthor.textContent = authorInput.value;
-  dynamicPages.textContent = pagesInput.value;
+  dynamicTitle.textContent = titleInput.value || "N/A";
+  dynamicAuthor.textContent = authorInput.value || "N/A";
+  dynamicPages.textContent = pagesInput.value || "N/A";
   if (!readInput.checked) {
     dynamicRead.textContent = "Unread";
   } else {
