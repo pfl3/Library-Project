@@ -1,381 +1,355 @@
 :root {
-    --ash-gray: #cad2c5ff;
-    --dark-sea-green: #84a98cff;
-    --hookers-green: #52796fff;
-    --dark-slate-gray: #354f52ff;
-    --charcoal: #2f3e46ff;
+  --ash-gray: #cad2c5ff;
+  --dark-sea-green: #84a98cff;
+  --hookers-green: #52796fff;
+  --dark-slate-gray: #354f52ff;
+  --charcoal: #2f3e46ff;
 }
 * {
-    padding: 0;
-    margin:  0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 html {
-    
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 header {
-    height: 150px;
-    background: var(--dark-slate-gray);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.229);
+  height: 150px;
+  background: var(--dark-slate-gray);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.229);
 }
 main {
-    height: auto;
+  height: auto;
 }
 .header-container {
-    display: flex;
-    max-width: 1152px;
-    margin: 0 auto;
-    height: 100%;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1rem;
-    
+  display: flex;
+  max-width: 1152px;
+  margin: 0 auto;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
 }
 .header-container h1 {
-    font-size: 4.6rem;
-    color: var(--ash-gray);
+  font-size: 4.6rem;
+  color: var(--ash-gray);
 }
 .header-container button {
-    background: var(--dark-sea-green);
-    border-radius: 10px;
-    padding: 1rem;
-    border: none;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.227);
-    
-    
+  background: var(--dark-sea-green);
+  border-radius: 10px;
+  padding: 1rem;
+  border: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.227);
 }
 .logo {
-    height: 100px;
-    width: 100px;
-    margin-bottom: 1.4rem;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 1.4rem;
 }
 .add-book {
-    font-size: 3.2rem;
-    margin-left: 4rem;
-    color: white;
+  font-size: 3.2rem;
+  margin-left: 4rem;
+  color: white;
 }
 .add-book:hover {
-    background-color: var(--ash-gray);
-    color: var(--charcoal);
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: all ease-in-out .2s;
+  background-color: var(--ash-gray);
+  color: var(--charcoal);
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all ease-in-out 0.2s;
 }
 .delete-all {
-    font-size: 2.4rem;
-    margin-left:  auto;
-    color: white;
+  font-size: 2.4rem;
+  margin-left: auto;
+  color: white;
 }
 .delete-all:hover {
-    background: var(--ash-gray);
-    color: firebrick;
-    cursor: pointer;
+  background: var(--ash-gray);
+  color: firebrick;
+  cursor: pointer;
 }
 /* START Main book container */
 .main-book-container {
-    display: grid;
-    gap: 1rem;
-    max-width: 1152px;
-    height: auto;
-    margin: 0 auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-     padding-top: 5rem;
-     
- }
- .modal-style {
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     background: var(--dark-slate-gray);
-     width: 400px;
-     height: 550px;
-     border: 3px solid var(--hookers-green);
-     border-radius: 10px;
-     z-index: 1010;
-     display: none;
- }
- .modal-background {
-     background:  hsla(201, 20%, 23%, .8);
-     z-index: 1000;
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     display: none;
- }
- /* START Add New Book Modal and Form Styles */
- .modal-visible {
-     display: block;
- }
- .modal-background-visible {
-     display: block;
- }
- .form-style {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-evenly;
-     align-items: center;
-     margin: 0 auto;
-     width: 90%;
-     height: 100%;
- }
-
-    
-    
-
-    
-
-
-
-   
-    
-    
-
-    
+  display: grid;
+  gap: 1rem;
+  max-width: 1152px;
+  height: auto;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 5rem;
+}
+.modal-style {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--dark-slate-gray);
+  width: 400px;
+  height: 550px;
+  border: 3px solid var(--hookers-green);
+  border-radius: 10px;
+  z-index: 1010;
+  display: none;
+}
+.modal-background {
+  background: hsla(201, 20%, 23%, 0.8);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+/* START Add New Book Modal and Form Styles */
+.modal-visible {
+  display: block;
+}
+.modal-background-visible {
+  display: block;
+}
+.form-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+}
 
 .form-style label {
-    font-size: 2.8rem;
-    color: var(--ash-gray);
+  font-size: 2.8rem;
+  color: var(--ash-gray);
 }
 .form-style input {
-    border: none;
-    width: 90%;
-    height: 40px;
-    border-radius: 5px;
-    font-size: 2.1rem;
+  border: none;
+  width: 90%;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 2.1rem;
+  padding-left: 1rem;
 }
 .form-style input:focus {
-    outline: 3px solid lightskyblue;
-    border-radius: 5px;
-    
+  outline: 3px solid lightskyblue;
+  border-radius: 5px;
 }
 .check-container {
-    display: flex;
-    gap: 5rem;
-    
+  display: flex;
+  gap: 5rem;
 }
 .yes {
-    display: flex;
-    gap: 1rem;
-
+  display: flex;
+  gap: 1rem;
 }
 .yes input {
-    height: 30px;
-    width: 30px;
+  height: 30px;
+  width: 30px;
 }
 .no {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 .no input {
-    height: 30px;
-    width: 30px;
+  height: 30px;
+  width: 30px;
 }
 
 .form-style p {
-    color: var(--ash-gray);
-    font-size: 2.8rem;
+  color: var(--ash-gray);
+  font-size: 2.8rem;
 }
 .form-style button {
-    background: var(--dark-sea-green);
-    color: white;
-    font-size: 3.2rem;
-    width: 50%;
-    border-radius: 10px;
-    padding: 1rem;
-    border: none;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.227);
+  background: var(--dark-sea-green);
+  color: white;
+  font-size: 3.2rem;
+  width: 50%;
+  border-radius: 10px;
+  padding: 1rem;
+  border: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.227);
 }
 .form-style button:hover {
-    background-color: var(--ash-gray);
-    color: var(--charcoal);
-    cursor: pointer;
+  background-color: var(--ash-gray);
+  color: var(--charcoal);
+  cursor: pointer;
 }
-    
+
 .close {
-    position: absolute;
-    top: 5px;
-    right: 5px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 .close:hover {
-    transform: scale(1.1);
-    background: var(--charcoal);
-    border-radius: 50%;
-    cursor: pointer;
+  transform: scale(1.1);
+  background: var(--charcoal);
+  border-radius: 50%;
+  cursor: pointer;
 }
 /* START Delete All Button Confirmation Modal Styles */
 .warning-style {
-
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    max-width: 400px;
-    height: 550px;
-    background: var(--ash-gray);
-    border-radius: 10px;
-    border: 3px solid var(--dark-slate-gray);
-    display: none;
-    z-index: 1010;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 400px;
+  height: 550px;
+  background: var(--ash-gray);
+  border-radius: 10px;
+  border: 3px solid var(--dark-slate-gray);
+  display: none;
+  z-index: 1010;
 }
 .warning-text {
-    width: 90%;
-    font-size: 3.6rem;
-    font-weight: 800;
-    text-align: center;
-    padding: 2rem;
-    color: firebrick;
+  width: 90%;
+  font-size: 3.6rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 2rem;
+  color: firebrick;
+}
+.bot-text {
+  margin-top: 0;
+  padding: 0;
 }
 .cancel {
-    border: 2px white solid;
-    width: 80%;
-    background: var(--dark-sea-green);
-    font-size: 3.8rem;
-    color: white;
-    border-radius: 10px;
-    padding: 3rem;
-    border: none;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.227);
+  border: 2px white solid;
+  width: 80%;
+  background: var(--dark-sea-green);
+  font-size: 3.8rem;
+  color: white;
+  border-radius: 10px;
+  padding: 3rem;
+  border: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.227);
 }
-   
 
-
-    
 .cancel:hover {
-    background: rgb(139, 216, 139);
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: all ease-in-out .3s;
+  background: rgb(139, 216, 139);
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all ease-in-out 0.3s;
 }
-        
+
 .delete {
-    width: 80%;
-    background: firebrick;
-    font-size: 3.8rem;
-    color: white;
-    border-radius: 10px;
-    padding: 3rem;
-    border: none;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.227);
+  width: 80%;
+  background: firebrick;
+  font-size: 3.8rem;
+  color: white;
+  border-radius: 10px;
+  padding: 3rem;
+  border: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.227);
 }
-    
+
 .delete:hover {
-    background: orange;
-    outline: 3px firebrick dashed;
-    border-radius: 10px;
-    transform: scale(1.05);
-        transition: all ease-in-out .3s;
+  background: orange;
+  outline: 3px firebrick dashed;
+  border-radius: 10px;
+  transform: scale(1.05);
+  transition: all ease-in-out 0.3s;
 }
 .delete-close {
-    position: absolute;
-    top: 5px;
-    right: 5px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 .delete-close:hover {
-    transform: scale(1.1);
-    background: var(--dark-sea-green);
-    border-radius: 50%;
-    cursor: pointer;
+  transform: scale(1.1);
+  background: var(--dark-sea-green);
+  border-radius: 50%;
+  cursor: pointer;
 }
 .del-modal-background {
-    background: hsla(201, 20%, 23%, .8);
-    z-index: 1000;
+  background: hsla(201, 20%, 23%, 0.8);
+  z-index: 1000;
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
 }
 .warn-modal-visible {
-    display: flex;
+  display: flex;
 }
 
 .warn-modal-background-visible {
-    display: flex;
+  display: flex;
 }
 /* Book Cards Styles */
 .book-card-container {
-    position: relative;
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    max-width: 280px;
-    height: 400px;
-    border: 1px black solid;
-    border-radius: 10px;
-    border: none;
-    background-image: linear-gradient(0deg,
-    #52796fff,
-    #354f52ff,
-    #2f3e46ff);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 280px;
+  height: 400px;
+  border: 1px black solid;
+  border-radius: 10px;
+  border: none;
+  background-image: linear-gradient(0deg, #52796fff, #354f52ff, #2f3e46ff);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 .book-card-container:hover {
-    transform: scale(1.03);
-    background-image: linear-gradient(0deg,
-                rgb(91, 129, 119),
-                rgb(63, 90, 93),
-                rgb(57, 73, 82));
-    
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-    transition: all ease-in-out .3s;
+  transform: scale(1.03);
+  background-image: linear-gradient(
+    0deg,
+    rgb(91, 129, 119),
+    rgb(63, 90, 93),
+    rgb(57, 73, 82)
+  );
+
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  transition: all ease-in-out 0.3s;
 }
-        
-       
-    
+
 .trash {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    height: 3.5rem;
-    width: 3.5rem;
-    padding: .5rem;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 3.5rem;
+  width: 3.5rem;
+  padding: 0.5rem;
 }
 .trash:hover {
-    background: firebrick;
-    border-radius: 50%;
-    cursor: pointer;
+  background: firebrick;
+  border-radius: 50%;
+  cursor: pointer;
 }
 .book-read {
-    width: 90%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .book-read button {
-    color: white;
-    letter-spacing: .1rem;
-    background: var(--dark-sea-green);
-    border-radius: 10px;
-    padding: 1rem;
-    border: none;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.227);
+  color: white;
+  letter-spacing: 0.1rem;
+  background: var(--dark-sea-green);
+  border-radius: 10px;
+  padding: 1rem;
+  border: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.227);
 }
 .book-read button:hover {
-    background: var(--ash-gray);
-    color: var(--charcoal);
-    cursor: pointer;
+  background: var(--ash-gray);
+  color: var(--charcoal);
+  cursor: pointer;
 }
 .book-read button:active {
-    background-color: white;
-    box-shadow: none;
-    
+  background-color: white;
+  box-shadow: none;
 }
 .book-read p {
-    padding-right: 2rem;
+  padding-right: 2rem;
 }
